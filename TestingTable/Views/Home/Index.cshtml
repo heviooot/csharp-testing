@@ -1,0 +1,124 @@
+﻿@model IEnumerable<SobData>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    table,
+    th {
+        border: 1px solid black;
+    }
+
+    table {
+        margin: auto;
+        width: auto;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">This is table</h1>
+
+    <h2>All Data Table</h2>
+
+    <table>
+        <tr>
+            <th>Policy No</th>
+            <th>Policy End No</th>
+            <th>Post Date</th>
+            <th>Distribution Code</th>
+            <th>Distribution Name</th>
+            <th>Distribution Type</th>
+            <th>Acting Code</th>
+            <th>LOB Code</th>
+            <th>POL Office</th>
+            <th>Premium</th>
+            <th>Comm</th>
+            <th>Disc</th>
+        </tr>
+        @foreach (SobData data in Model)
+        {
+            <tr>
+                <th>@data.policy_no</th>
+                <th>@data.pol_end_no</th>
+                <th>@data.post_date</th>
+                <th>@data.distribution_code</th>
+                <th>@data.distribution_name</th>
+                <th>@data.distribution_type</th>
+                <th>@data.acting_code</th>
+                <th>@data.lob_code</th>
+                <th>@data.pol_office</th>
+                <th>@data.premium</th>
+                <th>@data.comm</th>
+                <th>@data.disc</th>
+            </tr>
+        }
+    </table>
+
+    <h2>Data Table Monthly</h2>
+
+    <table>
+        <!-- make a condition on how many colspan based on the data -->
+        <tr class="header">
+            <th rowspan=2>SOB</th>
+            <th colspan=6>Period Type</th>
+        </tr>
+    </table>
+
+    <table>
+        <!-- make a condition on how many colspan based on the data -->
+        <tr class="header">
+            <th rowspan=2>SOB</th>
+            <th colspan=6>Period Type</th>
+        </tr>
+        <!-- just loop through the data and get all the necessary groups -->
+        <tr>
+            <th>2019</th>
+            <th>2020</th>
+            <th>2021</th>
+            <th>2022</th>
+            <th>Total</th>
+        </tr>
+        <!-- just put it all -->
+        <tr>
+            <th>AG</th>
+            <th>123</th>
+            <th>456</th>
+            <th>789</th>
+            <th>321</th>
+            <th>654</th>
+        </tr>
+        <tr>
+            <th>AG</th>
+            <th>123</th>
+            <th>456</th>
+            <th>789</th>
+            <th>321</th>
+            <th>654</th>
+        </tr>
+        <tr>
+            <th>AG</th>
+            <th>123</th>
+            <th>456</th>
+            <th>789</th>
+            <th>321</th>
+            <th>654</th>
+        </tr>
+        <tr>
+            <th>AG</th>
+            <th>123</th>
+            <th>456</th>
+            <th>789</th>
+            <th>321</th>
+            <th>654</th>
+        </tr>
+        <tr>
+            <th>AG</th>
+            <th>123</th>
+            <th>456</th>
+            <th>789</th>
+            <th>321</th>
+            <th>654</th>
+        </tr>
+    </table>
+</div>
+
